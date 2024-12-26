@@ -6,6 +6,7 @@ header {
   width: 100%;
   height: 80px;
   border-bottom: 1px solid #dddddd;
+  overflow: hidden;
 }
 header .inner {
   display: flex;
@@ -13,49 +14,86 @@ header .inner {
   align-items: center;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
 }
 header .logoBox a {
   display: inline-block;
+  color: #000000;
   font-family: "Raleway", sans-serif;
   font-size: 32px;
   font-weight: 700;
 }
-header nav {
-  width: 100%;
-  max-width: 1000px;
-  height: 100%;
-}
-header nav ul {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-header nav ul li {
-  width: 20%;
-  height: 100%;
-}
-header nav ul li:last-child {
-  margin: 0;
-}
-header nav ul li a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  color: #333333;
+header .linkBox a {
+  display: inline-block;
+  margin: 0 15px 0 0;
+  color: #000000;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
 }
-header .hamburger {
-  display: none;
+header .linkBox a:last-child {
+  margin: 0;
+}
+
+@media all and (max-width: 1024px) {
+  header {
+    height: 70px;
+  }
+  header .logoBox a {
+    font-size: 28px;
+  }
+  header .linkBox a {
+    margin: 0 12px 0 0;
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 768px) {
+  header {
+    height: 60px;
+  }
+  header .logoBox a {
+    font-size: 22px;
+  }
+  header .linkBox a {
+    margin: 0 10px 0 0;
+    font-size: 15px;
+  }
+}
+@media all and (max-width: 400px) {
+  header .logoBox a {
+    font-size: 18px;
+  }
+  header .linkBox a {
+    margin: 0 8px 0 0;
+    font-size: 13px;
+  }
 }
 footer {
   padding: 80px 80px;
-  color: #ffffff;
+  color: #666666;
   text-align: center;
-  border-top: 1px solid #ffffff;
-  background: royalblue;
+  border-top: 1px solid #dddddd;
+  background: #ffffff;
+}
+
+footer h6 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media all and (max-width: 1024px) {
+  footer {
+    padding: 60px 60px;
+  }
+  footer h6 {
+    font-size: 15px;
+  }
+}
+@media all and (max-width: 768px) {
+  footer {
+    padding: 8vw 8vw;
+  }
+  footer h6 {
+    font-size: 3vw;
+  }
 }

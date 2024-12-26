@@ -33,6 +33,8 @@ export default function canvas01() {
     const material02 = new THREE.MeshNormalMaterial(/* {color:'plum'} */);
 
     const mesh02 = new THREE.Mesh(Boxgeo02, material02);
+    gsap.to(mesh02.rotation, {x:10000 , y:10000 , duration:10000, repeat:-1, yoyo:true, ease: "none"});
+
 
     scene.add(mesh02)
 
@@ -45,7 +47,7 @@ export default function canvas01() {
         // controls.update();
 
         // gsap.to([mesh02.position, mesh02.rotation], {x: -Math.PI * delta * 1000, y: -Math.PI * delta * 1000, duration: 3, ease: "power1.inOut"});
-        gsap.to([mesh02.rotation], {x: -Math.PI * delta * 1000, y: -Math.PI * delta * 1500, duration: 2, repeat:-1, ease: "power1.inOut"});
+        // gsap.to(mesh02.rotation, {x: -Math.PI * delta * 1000, y: -Math.PI * delta * 1500, duration: 2, repeat:-1, ease: "power1.inOut"});
 
         renderer.render(scene, camera);
         renderer.setAnimationLoop(draw);
